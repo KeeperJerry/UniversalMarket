@@ -31,11 +31,13 @@ public class ItemBuilder {
         this(itemType, ammount, 0);
     }
 
+	// i took it from here
+	// https://github.com/pie-flavor/UniversalMarket/commit/5a00426a25d9aa17ed7755b494eef6f2fb6c576b#
     public ItemBuilder(ItemType itemType, int ammount, int meta) {
         itemStack = ItemStack.of(itemType, ammount);
         DataContainer container = itemStack.toContainer();
         container.set(DataQuery.of("UnsafeDamage"), meta);
-        itemStack.setRawData(container);
+        itemStack = ItemStack.builder().fromContainer(container).build();
     }
 
     public ItemBuilder setName(Text name) {

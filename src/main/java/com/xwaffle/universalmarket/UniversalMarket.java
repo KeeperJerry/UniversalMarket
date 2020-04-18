@@ -13,7 +13,7 @@ import org.spongepowered.api.Sponge;
 import org.spongepowered.api.config.DefaultConfig;
 import org.spongepowered.api.entity.living.player.Player;
 import org.spongepowered.api.event.Listener;
-import org.spongepowered.api.event.game.state.GameAboutToStartServerEvent;
+import org.spongepowered.api.event.game.state.GameInitializationEvent;
 import org.spongepowered.api.event.game.state.GameStartedServerEvent;
 import org.spongepowered.api.event.game.state.GameStoppingServerEvent;
 import org.spongepowered.api.event.service.ChangeServiceProviderEvent;
@@ -58,9 +58,10 @@ public class UniversalMarket {
     private static MarketConfig config;
     private Market market;
 
-
+	// i took it from here
+	// https://github.com/pie-flavor/UniversalMarket/commit/5a00426a25d9aa17ed7755b494eef6f2fb6c576b#
     @Listener
-    public void onAboutToStart(GameAboutToStartServerEvent event) {
+    public void onAboutToStart(GameInitializationEvent event) {
         instance = this;
         config = new MarketConfig();
         database = new Database(getConfig().isExternal());
