@@ -1,21 +1,21 @@
-# UniversalMarket
-A MySQL based Item Market system powered by Sponge
+# UniversalMarket / Shop
+Магазин предметов/блоков, основаннный на MySQL и работающий на Sponge
 
 
-## Commands
+## Команды
 
-All Universal Market commands can be use as /um or /universalmarket
+Все команды магазина можно посмотреть `/shop help` или `/um help`
 
-### Open Market
-`/um open, /um o, /um`
+### Открыть магазин
+`/shop`, `/shop open`, `/shop o`
 
-### Add to Market
-`/um add, /um a`
-`/um add (price)`
-`/um add (price) (<optional>amount)`
+### Добавить предмет
+`/shop add, /shop a`
+`/shop add (price)`
+`/shop add (price) (<optional>amount)`
 
 ### Reload Config
-`/um reload, /um r`
+`/shop reload, /shop r`
 
 ## The Market
 ![Market](https://gyazo.com/aa747f5486fbe224f74984d94bbd91f6.png)
@@ -26,20 +26,18 @@ All Universal Market commands can be use as /um or /universalmarket
 
 ## Permissions
 
-`com.xwaffle.universalmarket.open` - Permission to open the Universal Market.
+`com.xwaffle.universalmarket.open` - Разрешение на открытие магазина (общее использование).
 
-`com.xwaffle.universalmarket.add` - Permission to add items to the Universal Market.
+`com.xwaffle.universalmarket.add` - Разрешение на добавление списка продажи предметов.
 
-`com.xwaffle.universalmarket.remove` - Permission to remove a players item from being listed in the Universal Market.
+`com.xwaffle.universalmarket.remove` - Разрешение на удаление предмета из списка игроков.
 ![MarketRemove](https://gyazo.com/bb9fbd4406a8c85dd7f74e0adbeedb33.png)
 
-#### If the config option `use-permission-to-sell` is equal to true
+#### Если опция `use-permission-to-sell` подключена как `true`
 
-**Note When enabled, be sure to set the `total-items-player-can-sell` config option to be higher than the highest permission node you give out.*
+**Примечание: При включении обязательно установите `total-items-player-can-sell` опция конфигурации должна быть выше, чем самый высокий узел разрешения, который вы выдаваете.*
 
-`com.xwaffle.universalmarket.addmax.##` - Sets the amount of items a user may  sell in the Universal Market.
+`com.xwaffle.universalmarket.addmax.##` - Устанавливает количество предметов, которые пользователь может продать в магазине.
 
-EX: `com.xwaffle.universalmarket.addmax.5`, this will allow the user to sell 5 items at a time in the Universal Market.
+Пример: `com.xwaffle.universalmarket.addmax.5`, - это позволит пользователю одновременно продавать 5 товаров в магазине.
 
-## Stats
-https://bstats.org/plugin/sponge/UniversalMarket

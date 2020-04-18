@@ -65,7 +65,7 @@ public class UniversalMarket {
         instance = this;
         config = new MarketConfig();
         database = new Database(getConfig().isExternal());
-        game.getCommandManager().register(this, new MarketCommand(), "universalmarket", "market", "um");
+        game.getCommandManager().register(this, new MarketCommand(), "universalmarket", "market", "shop", "um");
 
     }
 

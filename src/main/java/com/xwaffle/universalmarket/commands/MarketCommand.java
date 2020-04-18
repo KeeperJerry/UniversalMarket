@@ -76,7 +76,7 @@ public class MarketCommand extends BasicCommand {
                     int listingCount = UniversalMarket.getInstance().getMarket().countListings(player.getUniqueId());
                     if (args.length < 2) {
                         player.sendMessage(Text.of(TextColors.RED, "Invalid Command!"));
-                        player.sendMessage(Text.of(TextColors.YELLOW, "/um " + args[0].toLowerCase() + " (price of item in hand) (<optional> Amount)"));
+                        player.sendMessage(Text.of(TextColors.YELLOW, "/shop " + args[0].toLowerCase() + " (price of item in hand) (<optional> Amount)"));
                         return CommandResult.success();
                     }
 
@@ -117,7 +117,7 @@ public class MarketCommand extends BasicCommand {
                             }
                         } catch (Exception exc) {
                             player.sendMessage(Text.of(TextColors.RED, "Invalid Price for Item!"));
-                            player.sendMessage(Text.of(TextColors.YELLOW, "/um " + args[0].toLowerCase() + " (price of item in hand) (<optional> Amount)"));
+                            player.sendMessage(Text.of(TextColors.YELLOW, "/shop " + args[0].toLowerCase() + " (price of item in hand) (<optional> Amount)"));
                             return CommandResult.success();
                         }
 
@@ -135,7 +135,7 @@ public class MarketCommand extends BasicCommand {
                                 }
                             } catch (Exception exc) {
                                 player.sendMessage(Text.of(TextColors.RED, "Invalid Amount for Item!"));
-                                player.sendMessage(Text.of(TextColors.YELLOW, "/um " + args[0].toLowerCase() + " (price of item in hand) (<optional> Amount)"));
+                                player.sendMessage(Text.of(TextColors.YELLOW, "/shop " + args[0].toLowerCase() + " (price of item in hand) (<optional> Amount)"));
                                 return CommandResult.success();
                             }
                         }
@@ -210,11 +210,11 @@ public class MarketCommand extends BasicCommand {
                 case "h":
                 case "?":
                     source.sendMessage(Text.of(TextColors.DARK_AQUA, "Universal Market Help"));
-                    source.sendMessage(Text.of(TextColors.YELLOW, "/um or /universalmarket"));
-                    source.sendMessage(Text.of(TextColors.YELLOW, "/um a (price) (<optional> amount) or /um add (price) (<optional> amount)", TextColors.GRAY, " - ", TextColors.GREEN, "Sells current held ItemStack for price."));
-                    source.sendMessage(Text.of(TextColors.YELLOW, "/um o or /um open", TextColors.GRAY, " - ", TextColors.GREEN, "Open the Universal Market."));
-                    source.sendMessage(Text.of(TextColors.YELLOW, "/um i or /um info", TextColors.GRAY, " - ", TextColors.GREEN, "Display the current configuration of the market."));
-                    source.sendMessage(Text.of(TextColors.YELLOW, "/um r or /um reload", TextColors.GRAY, " - ", TextColors.GREEN, "Reloads the market config."));
+                    source.sendMessage(Text.of(TextColors.YELLOW, "/shop or /universalmarket"));
+                    source.sendMessage(Text.of(TextColors.YELLOW, "/shop a (price) (<optional> amount) or /shop add (price) (<optional> amount)", TextColors.GRAY, " - ", TextColors.GREEN, "Sells current held ItemStack for price."));
+                    source.sendMessage(Text.of(TextColors.YELLOW, "/shop o or /shop open", TextColors.GRAY, " - ", TextColors.GREEN, "Open the Universal Market."));
+                    source.sendMessage(Text.of(TextColors.YELLOW, "/shop i or /shop info", TextColors.GRAY, " - ", TextColors.GREEN, "Display the current configuration of the market."));
+                    source.sendMessage(Text.of(TextColors.YELLOW, "/shop r or /shop reload", TextColors.GRAY, " - ", TextColors.GREEN, "Reloads the market config."));
                     break;
                 case "reload":
                 case "r":

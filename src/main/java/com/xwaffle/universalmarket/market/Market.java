@@ -168,7 +168,7 @@ public class Market {
     }
 
     public void openMarket(Player player, int page) {
-        Inventory inv = new InventoryBuilder("Universal Market | " + (page), 6) {
+        Inventory inv = new InventoryBuilder("Магазин | " + (page), 6) {
             @Override
             public void onClickInventoryEvent(ClickInventoryEvent e) {
                 e.setCancelled(true);
