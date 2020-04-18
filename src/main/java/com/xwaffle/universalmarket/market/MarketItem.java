@@ -58,13 +58,13 @@ public class MarketItem {
 
     public String getExpireTimeFromNow() {
         if (isExpired()) {
-            return "Now";
+            return "Сейчас";
         } else {
             long millis = timeExpires - System.currentTimeMillis();
             long second = (millis / 1000) % 60;
             long minute = (millis / (1000 * 60)) % 60;
             long hour = (millis / (1000 * 60 * 60)) % 24;
-            return String.format("%02dh %02dm %02ds", hour, minute, second);
+            return String.format("%02dчас %02dмин %02dсек", hour, minute, second);
 
         }
     }
@@ -113,11 +113,11 @@ public class MarketItem {
         }
 
         lore.add(Text.of(""));
-        lore.add(Text.of(TextColors.AQUA, "SELLER: ", TextColors.YELLOW, getOwnerName()));
-        lore.add(Text.of(TextColors.AQUA, "PRICE: ", TextColors.GOLD, getPrice()));
+        lore.add(Text.of(TextColors.AQUA, "Продавец: ", TextColors.YELLOW, getOwnerName()));
+        lore.add(Text.of(TextColors.AQUA, "Цена: ", TextColors.GOLD, getPrice()));
 
         if (UniversalMarket.getInstance().getMarket().expireItems()) {
-            lore.add(Text.of(TextColors.AQUA, "EXPIRES: ", TextColors.GRAY, getExpireTimeFromNow()));
+            lore.add(Text.of(TextColors.AQUA, "Истекает: ", TextColors.GRAY, getExpireTimeFromNow()));
         }
 //        lore.add(Text.of(TextColors.AQUA, "MARKET-ID: ", TextColors.GOLD, UniversalMarket.getInstance().getMarket()));
 

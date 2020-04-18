@@ -1,4 +1,4 @@
-# UniversalMarket / Shop
+# UniversalMarket / shop
 Магазин предметов/блоков, основаннный на MySQL и работающий на Sponge
 
 
@@ -14,17 +14,17 @@
 `/shop add (price)`
 `/shop add (price) (<optional>amount)`
 
-### Reload Config
+### Перезагрузка конфига
 `/shop reload, /shop r`
 
-## The Market
+## Магазин
 ![Market](https://gyazo.com/aa747f5486fbe224f74984d94bbd91f6.png)
-## Market Item
+## Элемент рынка
 ![MarketItem](https://gyazo.com/34bf241b733cbed513214f9d89bf177d.png)
-## Market Config
+## Конфигурация магазина
 ![MarketConfig](https://gyazo.com/8620a0d03a31c549d692fa37a4540de6.png)
 
-## Permissions
+## Права доступа
 
 `com.xwaffle.universalmarket.open` - Разрешение на открытие магазина (общее использование).
 
